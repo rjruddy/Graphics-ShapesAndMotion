@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Rachel's Project B</title>
+  </head>
+	<!--	Create the HTML5 'canvas' element in which we will run WebGL  -->
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+	<!-- Make a 'div' element to hold changeable HTML made in our JavaScript file;
+		 (where? look inside main(), inside its 'tick()' function, where we
+		 display the 'current angle' value.
+	-->
+	<div id='Controls'>
+		Modify sway distance: <input type="range" min="10" max="40" value="20" class="slider" id="swayDist"> <br>
+		Use WASD to change the direction in which your camera is pointing. <br>
+		Click and drag to rotate one of the assemblies (try it out to find out which!)<br>
+		Use the Up/Down arrow keys to move forwards and backwards and the Left/Right keys to strafe side to side.
+	</div> 
+
+<hr> <!-- Draw a horizontal-line separator------------->
+	<p>
+		<!--BUTTONS: commands below create HTML push-buttons with labels
+			Spin <<, runStop, and Spin >>.  
+		When users click the button, HTML calls JavaScript function
+			 "runStop()"   -->
+	  <button type="button" onclick="runStop()">Run/Stop</button>
+    </p>
+	<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-quat03.js"></script>
+	<!--	Finally, load in our own JavaScript program file.
+	-->
+    <script src="RuddyRachel_ProjB.js"></script>
+  </body>
+</html>
